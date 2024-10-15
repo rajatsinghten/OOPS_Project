@@ -1,19 +1,26 @@
-#include<iostream>
-#include<fstream>
-#include<iomanip>
+#include <iostream>
+#include <fstream>
+#include <iomanip>
 
 using namespace std;
 
-void mainMenu();
+void mainMenu();  // Function declaration
+void customerInfo();  // Forward declaration for customer info
+void flights();  // Forward declaration for flight registration
+void bill();  // Forward declaration for ticket and charges
 
-class Management {
+class Management
+{
 public:
-    Management() {
+    Management()
+    {
         mainMenu();
     }
 };
 
-void mainMenu() {
+// Main menu function
+void mainMenu()
+{
     int choice;
     cout << "\t\tXYZ Airlines\n" << endl;
     cout << "\t\tMain Menu\n" << endl;
@@ -26,26 +33,48 @@ void mainMenu() {
     cout << "Enter your choice: ";
     cin >> choice;
 
-    switch(choice) {
-        case 1:
-            cout << "Add Customer Details\n";
-            break;
-        case 2:
-            cout << "Flight Registration\n";
-            break;
-        case 3:
-            cout << "Ticket and Charges\n";
-            break;
-        case 4:
-            cout << "Exiting...\n";
-            exit(0);
-        default:
-            cout << "Invalid choice. Try again.\n";
-            mainMenu();
+    switch (choice)
+    {
+    case 1:
+        customerInfo();
+        break;
+    case 2:
+        flights();
+        break;
+    case 3:
+        bill();
+        break;
+    case 4:
+        cout << "Exiting...\n";
+        exit(0);
+    default:
+        cout << "Invalid choice. Try again.\n";
+        mainMenu();
     }
 }
 
-int main() {
+// Placeholder functions for the respective features
+
+void customerInfo()
+{
+    cout << "Customer Information\n";
+    // Add logic to handle customer information here
+}
+
+void flights()
+{
+    cout << "Flight Registration\n";
+    // Add logic to handle flight registration here
+}
+
+void bill()
+{
+    cout << "Ticket and Charges\n";
+    // Add logic to handle ticketing and charges here
+}
+
+int main()
+{
     Management manage;
     return 0;
 }

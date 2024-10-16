@@ -4,11 +4,6 @@
 
 using namespace std;
 
-void mainMenu();  // Function declaration
-void customerInfo();  // Forward declaration for customer info
-void flights();  // Forward declaration for flight registration
-void bill();  // Forward declaration for ticket and charges
-
 class Management
 {
 public:
